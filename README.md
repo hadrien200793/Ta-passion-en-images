@@ -6,7 +6,7 @@ Groupe : MMI 1 - B
 Projet réalisé dans le cadre du BUT MMI - IUT de Marne-la-Vallée (2025-2026).
 
 1. Accès en ligne
-URL du site :  cornillard.projetsmmichamps.fr
+URL du site :  https://hadrien200793.github.io/Ta-passion-en-images/
 
 
 2. Suivi Qualité
@@ -26,7 +26,7 @@ Chemin standard : `C:\xampp\htdocs\`
 
 Installation :
 
-Créez un dossier nommé `sae105_series` dans `htdocs`.
+Créez un dossier nommé `Ta-passion-en-images` dans `htdocs`.
  
 Placez-y tous les fichiers du projet (`index.html`, `styles.css`, `script.js`, `data.js`et le dossier img)
 
@@ -38,7 +38,7 @@ Démarrez le module Apache (bouton "Start").
 
 Accès au site :
 
-Ouvrez votre navigateur et allez à l'adresse : `http://localhost/sae105_series/index.html`
+Ouvrez votre navigateur et allez à l'adresse : `http://localhost/Ta-passion-en-images/index.html`
 
 4. Notes Techniques
 Architecture des données : Le contenu (Game of Thrones, The 100, etc.) est centralisé dans data.js. Cela permet de mettre à jour les textes ou les images sans modifier la structure HTML.
