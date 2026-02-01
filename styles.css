@@ -1,0 +1,314 @@
+/* --- RESET & BASES --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Arial', sans-serif; /* Roboto est le 1er choix, Arial le 2ème, sans-serif est la famille générique obligatoire */
+    font-size: 1.1rem; /* Légèrement réduit pour l'équilibre */
+    line-height: 1.6;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* --- NAVIGATION --- */
+.nav-top {
+    position: fixed;   /* Fixe la barre en haut */
+    top: 0;
+    left: 0;
+    width: 100%;       /* Prend toute la largeur */
+    z-index: 1000;     /* Reste au premier plan */
+    
+    /* Ton style de design */
+    background-color: #1a1a1a; /* Ajoute une couleur de fond (ex: noir sombre) */
+    padding: 20px 0;           /* Padding vertical seulement */
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #333; /* Optionnel : une petite ligne de séparation */
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap; /* Pour mobile */
+    justify-content: center;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color:  #ffe0a6;  /* Couleur sur passage sur les nav */
+}
+
+/* --- HEADER --- */
+.header-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images5.alphacoders.com/287/thumb-1920-287897.jpg')center/cover no-repeat;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header-text {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.header-text h1 {
+    font-size: 3rem; /* LES SERIES */
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- SECTIONS PARALLAXE --- */
+
+.container {
+    width: 90%;
+    max-width: 900px; /* Un peu plus étroit pour la lecture */
+    margin: auto;
+    text-align: left; /* La lecture est souvent plus naturelle à gauche qu'en justifié */
+    line-height: 1.8;
+}
+
+.fixed-bg {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    height: 60vh; /* Réduit pour éviter trop de vide */
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.fixed-bg h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: auto;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.bg-1 { background-image: linear-gradient( rgba(0,0,0,0.1), #ffe0a6), url("https://pixelz.cc/wp-content/uploads/2019/12/game-of-thrones-iron-throne-daenerys-targaryen-uhd-4k-wallpaper.jpg"); }
+.bg-2 { background-image: linear-gradient( rgba(0,0,0,0.1), #263b2a), url("https://wallpapercat.com/w/full/4/f/1/1830378-3840x2160-desktop-4k-the-100-tv-series-background-image.jpg"); }
+.bg-3 { background-image: linear-gradient( rgba(0,0,0,0.1), #7c7340), url("https://images8.alphacoders.com/719/719647.jpg"); }
+.bg-4 { background-image: linear-gradient( rgba(0,0,0,0.1), #B377D3), url("https://images7.alphacoders.com/114/1149651.jpg"); }
+
+/* --- CONTENU & HABILLAGE --- */
+[class^="color-"] {
+    padding: 60px 0;
+    color: #333; /* Texte sombre sur fond coloré */
+}
+
+.color-1 { background-color: #ffe0a6; }
+.color-2 { background-color: #263b2a; color: white; }
+.color-3 { background-color: #7c7340; color: white; }
+.color-4 { background-color: #d377a5; }
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; /* Important pour les images flottantes */
+    line-height: 1.8;
+    padding: 20px;
+}
+
+.float-gauche { float: left; margin: 0 30px 20px 0; width: 250px; }
+.float-droite { float: right; margin: 20px 0 20px 30px; width: 250px; }
+
+.bloc img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.bloc p {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* --- POPUP --- */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.bloc img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.popup img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Style de la Section Formulaire --- */
+
+#formulaire {
+
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulaire h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Le conteneur du formulaire --- */
+
+#contribution-form {
+    background: rgba(255, 255, 255, 0.95); /* Fond blanc très légèrement transparent */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+#contribution-form:hover {
+    transform: translateY(-5px); /* Petit effet de lévitation au survol */
+}
+
+/* --- Les champs de saisie --- */
+.field {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.field input, 
+.field textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Effet quand on clique dans un champ */
+.field input:focus, 
+.field textarea:focus {
+    border-color: #e74c3c; /* Rouge comme ton thème */
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical; /* Permet d'agrandir seulement en hauteur */
+}
+
+/* --- Le bouton Envoyer --- */
+#contribution-form button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease, letter-spacing 0.3s ease;
+    margin-top: 10px;
+}
+
+#contribution-form button:hover {
+    background: #c0392b;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(192, 57, 43, 0.4);
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a { color: #e63946; }
+
+
+/* Gestion du volet déroulant */
+.volet {
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0a1a1e; 
+    color: #ccc;
+    padding: 10px;
+    border-top: 1px solid #ff0000;
+    transition: all 0.5s ease-in-out;
+}
+
+/* --- ÉTATS OUVERT / FERMÉ --- */
+.volet-invisible {
+    max-height: 70px; /* Hauteur du header uniquement */
+}
+
+.volet-visible {
+    max-height: 1500px; /* Assez grand pour tout le contenu */
+    background-color: #0d1f23;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma passion : Les Séries</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <head>
+        <script src="data.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+
+<body>
+    <div class="nav-top">
+        <nav>
+            <a href="#Accueil">Accueil</a>
+            <a href="#Series">Les séries</a>
+            <a href="#Got">GoT</a>
+            <a href="#The100">The 100</a>
+            <a href="#TWD">TWD</a>
+            <a href="#Dexter">Dexter</a>
+            <a href="#formulaire">Contribuer</a>
+        </nav>
+    </div>
+    <header id="Accueil">
+        <div id="Series" class="header-bg">
+            <div class="header-text">
+                <h1>Les séries</h1>
+                <p>Bienvenue ! <br>
+                    Je suis un grand fan de séries et j'ai créé ce site pour vous faire partager mes
+                    univers préférés, mes personnages favoris et mes saisons et moments préférés.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+    </main>
+    <section id="formulaire">
+        <h1>Ajout d'images</h1>
+        <form id="contribution-form">
+            <div class="field-group" style="display: flex; gap: 10px;">
+                <div class="field" style="flex: 1;">
+                    <label for="prenom">Prénom* (max 30)</label>
+                    <input type="text" id="prenom" placeholder="Ex: Dexter" maxlength="30" required>
+                </div>
+                <div class="field" style="flex: 1;">
+                    <label for="nom">Nom* (max 30)</label>
+                    <input type="text" id="nom" placeholder="Ex: Morgan" maxlength="30" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="lien">Lien de l’image* (max 255)</label>
+                <input type="url" id="lien" placeholder="https://exemple.com/image.jpg" maxlength="255" required>
+            </div>
+            <div class="field">
+                <label for="description">Description / Passion* (max 500)</label>
+                <textarea id="description" placeholder="Expliquez pourquoi cette image..." maxlength="500"
+                    required></textarea>
+                <small id="char-count" style="color: #ccc;"></small>
+            </div>
+            <button type="button" id="btn-visualiser">Visualiser</button>
+        </form>
+
+        <div id="preview-area" style="display:none; margin-top: 30px;">
+            <h2 style="color:white; text-align:center;">Prévisualisation de votre section</h2>
+            <div id="preview-content"></div>
+        </div>
+    </section>
+    <div id="preview-content"></div>
+    </div>
+    </section>
+
+    <footer>
+        <div id="monVolet" class="volet volet-invisible">
+            <div class="volet-header">
+                <h2>Mentions légales</h2>
+                <span class="icon-arrow">▼</span>
+            </div>
+
+            <div class="volet-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Éditeur du site</h3>
+                        <p>
+                            <strong>Hadrien CORNILLARD</strong><br>
+                            2 Rue Albert Einstein, 77420 Champs-sur-Marne<br>
+                            Contact : <a href="mailto:hadrien.cornillard@edu.univ-eiffel.fr">hadrien.cornillard@edu.univ-eiffel.fr</a>
+                        </p>
+                        <p><em>Site internet gratuit à but pédagogique, sans activité commerciale.</em></p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Hébergement</h3>
+                        <p>
+                            Le site est hébergé par : <strong>o2switch</strong><br>
+                            Chemin des Pardiaux, 63000 Clermont-Ferrand, France<br>
+                            Téléphone : 04 44 44 60 40
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <div class="footer-section">
+                            <h3>Propriété intellectuelle & Sources</h3>
+                            <p>Conformément au droit de citation et à l'exception pédagogique, les images tierces sont
+                                créditées
+                                comme suit :</p>
+                            <ul style="list-style: none; padding: 0; font-size: 0.85rem;">
+                                <li><strong>Portraits (Pinterest) :</strong>
+                                    <a href="https://pin.it/59HZeKF13" target="_blank">Jon Snow</a>,
+                                    <a href="https://pin.it/67lbekkOH" target="_blank">Lexa</a>,
+                                    <a href="https://fr.pinterest.com/johnotfound/" target="_blank">Rick Grimes</a>,
+                                    <a href="https://pin.it/7tzVatSEG" target="_blank">Dexter</a>.
+                                </li>
+                                <li><strong>Fonds d'écran (Backgrounds) :</strong>
+                                    <a href="https://share.google/FNVtnse9EDR5PMhOh" target="_blank">GoT
+                                        Wall</a>,
+                                    <a href="https://share.google/9HIMziMhFoPpztQIs" target="_blank">The 100 Wall</a>,
+                                    <a href="https://share.google/CmoRMhysTWgdm7prt" target="_blank">TWD
+                                        Wall</a>,
+                                    <a href="https://share.google/images/v4a6PE1Aae0hArZsi" target="_blank">Dexter
+                                        Wall</a>.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Collecte de données</h3>
+                            <p>Le formulaire de contribution collecte votre nom, email et les informations de votre
+                                contribution. Ces données sont utilisées uniquement dans le cadre pédagogique de ce
+                                projet et ne sont pas transmises à des tiers.
+                            </p>
+                            <h3>Responsabilité</h3>
+                            <p>Projet pédagogique. Aucune donnée personnelle n'est collectée et aucun cookie n'est
+                                utilisé.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>&copy; Hadrien CORNILLARD, 2025. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <div id="imagePopup" class="modal"
+        style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.9); justify-content:center; align-items:center;">
+        <span class="close"
+            style="position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer;">&times;</span>
+        <img id="popupImg" style="max-width:80%; max-height:80%; border-radius: 8px;">
+    </div>
+
+</body>
+
+</html>
